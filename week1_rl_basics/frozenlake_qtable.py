@@ -1,5 +1,7 @@
 import gymnasium as gym
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # 이 줄 추가
 import matplotlib.pyplot as plt
 
 env = gym.make("FrozenLake-v1", is_slippery=False)
@@ -57,5 +59,4 @@ plt.xlabel("Episode")
 plt.ylabel("Success Rate (100-ep average)")
 plt.title("FrozenLake Q-Learning")
 plt.savefig("week1_rl_basics/result.png")
-plt.show()
 print("그래프 저장 완료!")
